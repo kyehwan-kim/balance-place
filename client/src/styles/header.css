@@ -1,0 +1,59 @@
+.headerWrap {
+  background-color: #fff;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e1e1e1;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.headerWrap .fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.headerWrap .row {
+  display: flex;
+  align-items: center;
+}
+.headerWrap .row .left {
+  text-align: left;
+}
+.headerWrap .row .left .logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #000;
+}
+.headerWrap .row .right {
+  text-align: right;
+}
+.headerWrap .row .right span {
+  cursor: pointer;
+}
+.headerWrap .row .right .blackBtn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 0.6em 1.1em;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.7em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.headerWrap.scrollHeader {
+  box-shadow: rgba(173, 173, 173, 0.2196078431) 0px 3px 6px;
+  position: fixed;
+  padding: 12px 20px;
+  width: 100vw;
+  top: 0px;
+  left: 0px !important;
+  z-index: 3;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=header.css.map */

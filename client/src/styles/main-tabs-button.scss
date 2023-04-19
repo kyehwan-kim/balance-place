@@ -1,0 +1,63 @@
+.main-tab-wrap {
+  margin-top: 100px;
+
+  .tab-list {
+    text-align: left;
+    .tab-item {
+      margin-right: 8px;
+      display: inline-block;
+      .nav-link {
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 14px;
+        color: #555;
+        border-radius: 10px;
+        border: none;
+      }
+      .nav-link.active {
+        background-color: black;
+        color: #fff;
+      }
+    }
+  }
+  .tab-contents-wrap {
+    margin-top: 35px;
+    padding: 0px !important;
+    padding-bottom: 200px !important;
+    .tab-content {
+      display: none;
+    }
+    .tab-content1,
+    .tab-content2,
+    .tab-content3,
+    .tab-content4 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  // scroll이벤트
+  .scrollTab {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: rgb(173 173 173 / 22%) 0px 3px 6px;
+    z-index: 2;
+    width: 100vw;
+    top: 0px;
+    left: 0px !important;
+    animation: fadeIn 0.3s ease-in-out;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .scrollTabUl {
+    width: 1200px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,401 @@
+@import "./mp-blog.scss";
+$mobile-max: 420px;
+$tablet-max: 1023px;
+$desktop-min: 1024px;
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  left: 0;
+  width: 100%;
+  height: 102%;
+  background: #fafafa;
+  border-right: 1px solid rgb(211, 211, 211);
+  display: grid;
+  grid-template-rows: 100px;
+  row-gap: 1rem;
+  box-shadow: hsl(360, 67%, 44%);
+  transition: all 0.3s linear;
+  transform: translateX(-100%);
+  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.3);
+  // z-index: 111111
+}
+.show-sidebar {
+  transform: translateX(50px);
+  width: 600px;
+}
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 600px;
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 110px;
+  background: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+
+  h1 {
+    // 현재 실시간 위치
+    justify-content: center;
+    margin-top: -5px;
+    font-size: 30px;
+    color: #4c65a7;
+    font-weight: bold;
+  }
+
+  p {
+    justify-content: center;
+    // margin-top: 10px;
+    font-size: 15px;
+    color: #595959;
+  }
+
+  span {
+    font-weight: 500;
+  }
+  .close-btn {
+    position: absolute;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    color: #b2b2b2;
+    top: 10px;
+    right: 30px;
+  }
+  .close-btn:hover {
+    color: hsl(360, 71%, 66%);
+  }
+  
+  .board_container .board_header h1{
+    font-size: 24px;
+  }
+  .bookmark-btn {
+    position: absolute;
+    font-size: 1.6rem;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    color: #0675f4;
+    top: 15px;
+    right: 80px;
+  }
+}
+//북마크
+.detail-bookmark {
+  height: 92.5vh;
+  padding: 40px;
+  text-align: left;
+  overflow-y: scroll;
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .close-btn {
+    position: absolute;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    color: #b2b2b2;
+    top: 10px;
+    right: 30px;
+  }
+  .close-btn:hover {
+    color: hsl(360, 71%, 66%);
+  }
+  ul {
+    padding-left: 0px;
+    li {
+      position: relative;
+      padding: 18px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      background: #fff;
+      border: 1px solid #e1e1e1;
+      box-shadow: #adadad38 0px 3px 6px;
+    }
+    div:nth-child(1) {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    div:nth-child(2) {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    div:nth-child(3) {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    button {
+      position: absolute;
+      right: 30px;
+      bottom: 70px;
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: none;
+    }
+  }
+}
+.bookmark-text {
+  font-size: 18px;
+  padding: 40px;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .detail-information {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+  }
+
+  .report-population {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 20px 30px 20px;
+    border: 1px solid #dbdbdb;
+    margin: 15px 0;
+    box-shadow: #adadad38 0px 3px 6px;
+
+    // 실시간 인구
+    h3 {
+      font-size: 18px;
+      color: #4c65a7;
+      font-weight: bold;
+      margin-left: 0px;
+      margin-right: auto;
+      margin-bottom: 24px;
+    }
+
+    // 인구 혼잡도
+    h2 {
+      font-size: 20px;
+    }
+
+    // 안내 메세지
+    .report-crowded-msg {
+      display: flex;
+      justify-content: center;
+      width: 350px;
+
+      span {
+        font-size: 17px;
+        text-align: center;
+      }
+    }
+  }
+
+  // 날씨 메세지
+  .report-live-weather h3 {
+    font-size: 18px;
+    color: #4c65a7;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .report-weather {
+    box-shadow: #adadad38 0px 3px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #dbdbdb;
+    margin: 5px 0;
+
+    .today-weather-wrap {
+      .today-weather {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .img {
+        display: flex;
+        width: 65px;
+      }
+      p {
+        width: 300px;
+        font-size: 17px;
+        line-height: 1.7;
+        text-align: justify;
+      }
+    }
+
+    .today-weather-detail {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .temperature-img .img {
+        display: flex;
+        width: 65px;
+      }
+
+      p {
+        width: 300px;
+        font-size: 20px;
+        line-height: 1.7;
+        text-align: justify;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.map-container {
+  transform: translateX(400px);
+}
+
+@include mobile {
+  .sidebar {
+    position: relative;
+    background: #fff;
+    transition: all 0.4s linear;
+    transform: translateY(100%);
+    width: 100vw;
+    // z-index: 0;
+    overflow: hidden;
+    .board_container .board_header .close-btn{
+      top: -5%;
+    }
+    .sidebar-header {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      p {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      button {
+        font-size: 1.8rem;
+        top: 0%;
+        right: 2%;
+      }
+      .bookmark-btn {
+        position: absolute;
+        right: 50px;
+        top: 6px;
+        font-size: 1.5rem;
+      }
+    }
+    .detail-bookmark button {
+      position: absolute;
+      top: 3%;
+      width: 60px;
+      height: 40px;
+    }
+    .detail-content {
+      width: 100vw;
+      .detail-information {
+        width: 100%;
+        max-width: 370px;
+        .report-population {
+          width: inherit;
+          height: auto;
+          padding: 18px;
+          h3 {
+            font-size: 1rem;
+          }
+          h2 {
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .report-crowded-msg > span {
+            font-size: 15px;
+            font-weight: 500;
+            width: auto;
+          }
+        }
+        .report-weather {
+          width: inherit;
+          margin-top: 0px;
+          height: auto;
+          padding: 20px;
+          .report-live-weather {
+            h3 {
+              font-size: 1rem;
+            }
+          }
+          .today-weather-wrap {
+            .today-weather {
+              display: flex;
+              align-items: center;
+              img{
+                width: 40px;
+              }
+              p {
+                width: 70%;
+                font-size: 15px;
+                font-weight: 500;
+                text-align: left;
+              }
+            }
+          }
+          .today-weather-detail {
+            p {
+              width: 70%;
+              font-size: 15px;
+              font-weight: 500;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sidebar.show-sidebar {
+    transform: translateY(0);
+  }
+}
+// 여유, 보통 등 메세지
+.report-crowded {
+  font-weight: 700;
+  font-size: 30px;
+
+  &.green {
+    color: #3cb371; // 여유
+  }
+  &.yellow {
+    color: #ffcb5c; //보통
+  }
+  &.orange {
+    color: #ffa500; // 약간 붐빔
+  }
+  &.red {
+    color: #ff0000; // 붐빔
+  }
+}

@@ -1,0 +1,28 @@
+.main-card {
+  text-align: left;
+  margin-bottom: 50px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.main-card .img {
+  width: 100%;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+}
+.main-card .seoul_end_point {
+  margin-top: 10px;
+}
+.main-card .seoul_end_point .left {
+  color: #333 !important;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.main-card span {
+  margin-top: 2px;
+  font-size: 15px;
+  color: #777;
+  font-weight: 300;
+}/*# sourceMappingURL=card.css.map */

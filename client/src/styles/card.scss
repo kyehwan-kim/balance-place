@@ -1,0 +1,39 @@
+.main-card{
+  text-align: left;
+  margin-bottom: 50px;
+  padding: 0 15px;
+  cursor: pointer;
+  .img{
+    width: 100%;
+    min-width: 200px;
+    height: 200px;
+    border-radius:20px;
+    background-color: #f7f7f7;
+  }
+  .seoul_end_point{
+    margin-top: 10px;
+    .left{
+      color: #333 !important;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 2px; 
+    }
+    // .right{
+    //   font-size: 11px;
+    //   font-weight: 500;
+    //   padding: 2px 8px;
+    //   border-radius: 20px;
+    //   color: #ff312f;
+    //   background-color: #ffecec;
+    //   // border: 1px solid #ff312f;
+    //   float: right;
+    // }
+  }
+  
+  span{
+    margin-top: 2px;
+    font-size: 15px;
+    color: #777;
+    font-weight: 300;
+  }
+}

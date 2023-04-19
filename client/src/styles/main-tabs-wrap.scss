@@ -1,0 +1,27 @@
+.main-tabs-wrap{
+  margin-top: 50px;
+  li{
+    font-size: 14px;
+  }
+  .nav-tabs{
+    border-bottom: none !important;
+    border-color: none;
+    margin-bottom: 40px !important;
+    padding: 0 10px;
+    .nav-link{
+      border: none !important;
+      border-radius: 10px;
+      color: #555;
+      margin-right: 6px;
+    }
+    .nav-link.active{
+      background-color: black;
+      color: #fff;
+    }
+    .nav-link:hover{
+      border: none !important;
+      
+    }
+  }
+  
+}
