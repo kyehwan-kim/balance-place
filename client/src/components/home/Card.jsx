@@ -1,7 +1,5 @@
 import React from "react";
 import "../../styles/card.scss";
-import axios from "axios";
-import Spinner from "react-bootstrap/Spinner";
 import { useNavigate } from "react-router-dom";
 
 export default function Card({ name, img, latitude, longitude }) {

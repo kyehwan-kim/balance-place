@@ -2,7 +2,6 @@ import React from "react";
 import mainBanner from "../../assets/mainBanner@2x.png";
 import "../../styles/main_banner.scss";
 import weatherImg from "../../assets/weather.png";
-import peopleImg from "../../assets/people.png";
 import peopleImg2 from "../../assets/people2.png";
 import notice from "../../assets/notice.png";
 
